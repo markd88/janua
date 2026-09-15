@@ -143,3 +143,9 @@ http://localhost:3000/demo
 - `packages/admin`: React + Vite + MUI merchant Admin UI.
 - `config`: optional server-side config; `config/agent-config.json` is ignored by git.
 - `data`: runtime SQLite files, ignored by git.
+
+## Feedback
+
+Have a feature request, found a bug, or want to chat about self-hosted AI lead capture?
+
+Open an issue or email me at `markdba313 at gmail dot com`.
