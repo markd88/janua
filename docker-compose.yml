@@ -1,0 +1,54 @@
+services:
+  app:
+    build: .
+    ports:
+      - "${JANUA_PORT:-3000}:3000"
+    environment:
+      PORT: "3000"
+      ADMIN_API_KEY: "${ADMIN_API_KEY:-}"
+      JANUA_DATA_DIR: "/app/data"
+      JANUA_DB_PATH: "/app/data/janua.db"
+      JANUA_CONFIG_DIR: "/app/config"
+      JANUA_AGENT_CONFIG_PATH: "/app/config/agent-config.json"
+      JANUA_PUBLIC_BASE_URL: "${JANUA_PUBLIC_BASE_URL:-http://localhost:3000}"
+      JANUA_ALLOWED_ORIGINS: "${JANUA_ALLOWED_ORIGINS:-http://localhost:3000}"
+      JANUA_RATE_LIMIT_ENABLED: "${JANUA_RATE_LIMIT_ENABLED:-true}"
+      JANUA_RATE_LIMIT_WINDOW_MS: "${JANUA_RATE_LIMIT_WINDOW_MS:-60000}"
+      JANUA_RATE_LIMIT_MAX: "${JANUA_RATE_LIMIT_MAX:-60}"
+      JANUA_RATE_LIMIT_MAX_BUCKETS: "${JANUA_RATE_LIMIT_MAX_BUCKETS:-10000}"
+      JANUA_TRUST_PROXY: "${JANUA_TRUST_PROXY:-false}"
+      LEAD_WEBHOOK_URL: "${LEAD_WEBHOOK_URL:-}"
+      JANUA_LLM_PROVIDER: "${JANUA_LLM_PROVIDER:-fake}"
+      JANUA_OLLAMA_PREWARM: "${JANUA_OLLAMA_PREWARM:-true}"
+      JANUA_AGENT_TRACE: "${JANUA_AGENT_TRACE:-}"
+      JANUA_AGENT_TRACE_RAW: "${JANUA_AGENT_TRACE_RAW:-}"
+      OLLAMA_BASE_URL: "http://ollama:11434"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-llama3.2:3b}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY:-}"
+      OPENAI_MODEL: "${OPENAI_MODEL:-gpt-4o-mini}"
+      OPENAI_BASE_URL: "${OPENAI_BASE_URL:-https://api.openai.com/v1}"
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+      - ./logs:/app/logs
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles:
+      - ollama
+    environment:
+      OLLAMA_KEEP_ALIVE: "${OLLAMA_KEEP_ALIVE:-24h}"
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+volumes:
+  ollama-data:

@@ -1,0 +1,11 @@
+node_modules
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+data
+config/agent-config.json
+docs
+feasibility-assessment.md
+.env
+.git
+.DS_Store

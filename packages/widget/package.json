@@ -1,0 +1,15 @@
+{
+  "name": "@janua/widget",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=iife --global-name=JanuaWidgetBundle --outfile=dist/widget.js --target=es2020",
+    "dev": "pnpm build --watch",
+    "test": "vitest run --passWithNoTests"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
