@@ -1,4 +1,12 @@
-# Janua — 24/7 self-hosted AI lead capture for your website
+<h1 align="left">Janua</h1>
+
+<p align="center">
+  <strong>24/7 self-hosted AI lead capture for your website</strong>
+</p>
+
+<p align="center">
+  <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+</p>
 
 <a href="https://github.com/markd88/janua#top" title="Back to the top to star this repository">
   <img src="./assets/github-readme-star-cta.svg" width="100%" alt="Help grow the Janua community. Star this repo.">
@@ -149,3 +157,7 @@ http://localhost:3000/demo
 Have a feature request, found a bug, or want to chat about self-hosted AI lead capture?
 
 Open an issue or email me at `markdba313 at gmail dot com`.
+
+## License
+
+Janua is open source software licensed under the [MIT License](./LICENSE).
