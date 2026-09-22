@@ -30,6 +30,20 @@ Janua is designed around the full lead-capture loop:
 
 [Watch the demo video](./assets/janua-demo.mp4)
 
+## Why Janua
+
+Many established chat and support products can be configured to capture leads. Janua takes a different approach: the website-to-lead flow is the default product, not an extra workflow to set up.
+
+Janua is for businesses that want a website chat assistant that answers common questions, notices when someone is ready to talk, asks for contact details, and keeps the full conversation in one simple lead inbox.
+
+| Category | Examples | Usually Chosen For | Janua's Focus |
+| --- | --- | --- | --- |
+| Live chat tools | Crisp, Tidio | A shared place to talk with visitors and customers | Janua keeps the default flow centered on answering questions, collecting contact details, and saving leads for later |
+| Customer support platforms | Zendesk, Intercom | Tickets, help centers, automation, and team support workflows | Janua is narrower: it focuses on first-time website visitors who may become leads |
+| Sales chat and CRM tools | Drift, HubSpot Chat | Sales routing, meetings, pipelines, and CRM follow-up | Janua is lighter: it gives small teams a lead inbox before they adopt a larger sales stack |
+| Website Q&A bots | Chatbase, SiteGPT, CustomGPT-style bots | A bot that answers questions from your website or knowledge base | Janua treats answers as part of one default lead flow: useful answer, contact details, and conversation history |
+| Contact forms | Website forms, Typeform, custom forms | You want a simple way for ready-to-buy visitors to reach out | Janua gives unsure visitors a conversation before asking them to leave their details |
+
 ## Quick Start
 
 ### Ask AI To Set Up
